@@ -18,4 +18,7 @@ test('navigation smoke test', async ({ page }) => {
 	await headerElement.getByRole('link', { name: 'Contact' }).click()
 	await expect(page.getByRole('heading', { level: 1, name: 'Contact' })).toBeVisible()
 	// await expect(page).toHaveTitle(/Contact/)
+
+	// Can toggle theme - depends on aria-label for accessibility
+	await headerElement.getByRole('button', { name: 'toggle theme' }).click()
 })

@@ -9,7 +9,7 @@
 		<nav>
 			<a href="/contact" class="btn btn-ghost">Contact</a>
 		</nav>
-		<button onclick={() => window?.toggleTheme && window.toggleTheme()}>
+		<button aria-label="toggle theme" onclick={() => window?.toggleTheme && window.toggleTheme()}>
 			<!-- <Icon icon="solar:sun-linear" />
       <Icon icon="hugeicons:moon-01" /> -->
 			<ThemeToggleIcon class="btn btn-square btn-ghost p-2 text-sm" />
