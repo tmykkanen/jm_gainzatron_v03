@@ -1,8 +1,10 @@
 # JM Gainzatron App Tutorial
+
 SvelteKit 2025 🚀 Johnny Magrippis
 https://www.youtube.com/watch?v=Mizs9PKTPk8&list=PLD9qSm-W5DLoTa5jr33nTCkszADwzX7K-
 
 ## Video 1 (https://www.youtube.com/live/Mizs9PKTPk8?si=8bH7ObZMdQGVLCNn)
+
 - [x] 00:00 - What are we doing today? A brand new code-along REAL APP?
 - [x] 14:54 - What should I know already 🤔 Node? Package Managers? Typescript? The Svelte tutorial?
 - [x] 30:13 - Getting started with the SvelteKit wizard 🧙‍♂️ explaining our many choices
