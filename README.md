@@ -31,6 +31,6 @@ https://www.youtube.com/watch?v=Mizs9PKTPk8&list=PLD9qSm-W5DLoTa5jr33nTCkszADwzX
 - [x] 6:27:22 - Less flakey tests by waiting for app hydration!
 - [x] 6:38:00 - FINAL ⏱️ BREAK
 - [x] 6:41:15 - All about fonts & bringing in a custom one with fontsource
-- [ ] 6:58:02 - Setting up a Github project 🚀 deploying to Cloudflare
+- [x] 6:58:02 - Setting up a Github project 🚀 deploying to Cloudflare
 - [ ] 7:21:15 - Adding page metadata, including Opengraph Images!
 - [ ] 7:51:17 - Final 🥳 DEMO + LIKE 💜 SUBSCRIBE

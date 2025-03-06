@@ -3,7 +3,19 @@
 	import '@fontsource-variable/source-sans-3'
 	import { onNavigate } from '$app/navigation'
 	import Header from '$lib/components/Header.svelte'
+	import { page } from '$app/stores'
+
+	const hardcodedMeta = {
+		title: 'Gainzatron',
+		description: 'The fitness app for the rest of us',
+		og: '/og.png',
+	}
+
 	let { children } = $props()
+
+	let title = $derived(
+		$page.data.meta?.title ? `${$page.data.meta?.title} | Gainzatron` : hardcodedMeta.title,
+	)
 
 	onNavigate((navigation) => {
 		if (
@@ -34,10 +46,12 @@
 	})
 </script>
 
-<Header />
-
 <svelte:head>
-	<title>Gainzatron</title>
+	<title>
+		{title}
+	</title>
 </svelte:head>
+
+<Header />
 
 {@render children()}
