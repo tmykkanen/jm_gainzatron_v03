@@ -1,3 +1,9 @@
 @import 'tailwindcss';
+@import 'open-props/easings';
 @plugin '@tailwindcss/forms';
 @plugin '@tailwindcss/typography';
+@plugin "daisyui" {
+	themes:
+		light --default,
+		coffee --prefersdark;
+}
