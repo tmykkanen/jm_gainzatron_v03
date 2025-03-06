@@ -16,6 +16,13 @@
 	let title = $derived(
 		$page.data.meta?.title ? `${$page.data.meta?.title} | Gainzatron` : hardcodedMeta.title,
 	)
+	let description = $derived(
+		$page.data.meta?.description ? $page.data.meta?.description : hardcodedMeta.description,
+	)
+
+  let ogImageUrl = $derived(
+		`${$page.url.origin}${$page.data.meta?.og ? $page.data.meta?.og : hardcodedMeta.og}`,
+	)
 
 	onNavigate((navigation) => {
 		if (
@@ -47,9 +54,14 @@
 </script>
 
 <svelte:head>
-	<title>
-		{title}
-	</title>
+	<title>{title}</title>
+	<meta property="og:title" content={title} />
+	<meta property="og:description" content={description} />
+	<meta property="og:type" content="website" />
+	<meta property="og:site_name" content="Gainzatron" />
+	<meta property="og:url" content={$page.url.href} />
+	<meta property="og:image" content={ogImageUrl} />
+	<meta property="twitter:card" content="summary_large_image" />
 </svelte:head>
 
 <Header />
