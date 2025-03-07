@@ -8,6 +8,13 @@
 		coffee --prefersdark;
 }
 
+@plugin 'daisyui/theme' {
+	name: 'coffee';
+	default: true;
+	--color-info: --color-primary;
+	--color-info-content: --color-primary-content;
+}
+
 @theme {
 	--font-sans: 'Source Sans 3', system-ui;
 }

@@ -3,7 +3,10 @@
 	import '@fontsource-variable/source-sans-3'
 	import { onNavigate } from '$app/navigation'
 	import Header from '$lib/components/Header.svelte'
+	// TODO: update page to use state?
 	import { page } from '$app/stores'
+
+	import { Toaster, toast } from 'svelte-sonner'
 
 	const hardcodedMeta = {
 		title: 'Gainzatron',
@@ -68,3 +71,13 @@
 <Header />
 
 {@render children()}
+
+<Toaster
+	theme="dark"
+	toastOptions={{
+		unstyled: true,
+		classes: {
+			toast: 'toast alert',
+		},
+	}}
+/>
