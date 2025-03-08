@@ -48,7 +48,7 @@ https://www.youtube.com/watch?v=Mizs9PKTPk8&list=PLD9qSm-W5DLoTa5jr33nTCkszADwzX
 - [x] 1:29:31 - How do we know this worked?! Toast notifications with shadcn & sonner
 - [x] 1:38:03 - The Toast disappears for Playwright, due to full browser navigation!
 - [x] 1:41:07 - Checking Playwright’s video to figure out what went wrong!
-- [ ] 1:43:50 - Adding `use:enhance` to switch to client-side form submission and keep our toast!
+- [x] 1:43:50 - Adding `use:enhance` to switch to client-side form submission and keep our toast!
 - [ ] 2:09:19 - Standardised enhanced forms SvelteKit Superforms, validated with Zod
 - [ ] 3:07:36 - Standardised & type-safe Superform messages!
 - [ ] 3:25:35 - Emails 💌 Newsletter Audiences with Resend

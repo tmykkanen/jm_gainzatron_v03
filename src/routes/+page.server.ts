@@ -1,4 +1,12 @@
-import { error, type Actions } from '@sveltejs/kit'
+import { error } from '@sveltejs/kit'
+import type { Actions, PageServerLoad } from './$types.js'
+import { superValidate } from 'sveltekit-superforms'
+import { zod } from 'sveltekit-superforms/adapters'
+import { newsletterSchema } from './schema.js'
+
+export const load: PageServerLoad = async () => ({
+	form: superValidate(zod(newsletterSchema)),
+})
 
 export const actions: Actions = {
 	default: async ({ request }) => {
