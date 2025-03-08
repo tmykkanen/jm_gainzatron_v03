@@ -11,15 +11,18 @@
 		<form
 			method="POST"
 			use:enhance={() => {
-				// toast.loading('Submitting...')
-        // TODO: Resume at 1:51:30
-				toast.promise(() => new Promise((resolve) => setTimeout(resolve, 2000)), {
-					loading: 'Loading',
-					success: 'Thanks for signing up!',
-					error: 'Error',
-				})
-				return () => {
-					// toast.success('Thanks for signing up!')
+				const id = toast.loading('Submitting...')
+
+				return ({ result }) => {
+					if (result.type === 'success') {
+						toast.success('Thanks for signing up!', {
+							id,
+						})
+					} else {
+						toast.error('Something went wrong...', {
+							id,
+						})
+					}
 				}
 			}}
 		>

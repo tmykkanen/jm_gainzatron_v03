@@ -12,5 +12,6 @@ test('can sign up for the mailing list', async ({ page }) => {
 	await page.getByLabel('email').fill('playwright@gainzatron.com')
 	await page.getByRole('button', { name: 'Sign-up' }).click()
 
-	await expect(page.getByText('Thanks for signing up!')).toBeVisible()
+	const toastElement = page.getByRole('status')
+	await expect(toastElement.getByText('Thanks for signing up!')).toBeVisible()
 })
