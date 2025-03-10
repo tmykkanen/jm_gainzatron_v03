@@ -1,31 +1,25 @@
 <script lang="ts">
-	import { enhance } from '$app/forms'
 	import { toast } from 'svelte-sonner'
+	import { superForm, type Infer, type SuperValidated } from 'sveltekit-superforms'
+	import { newsletterSchema, type NewsletterSchema } from '../../routes/schema.js'
+	import { zodClient } from 'sveltekit-superforms/adapters'
 
-	const { title } = $props()
+	type Props = {
+		data: SuperValidated<Infer<NewsletterSchema>>
+		title: string
+	}
+
+	const { title, data }: Props = $props()
+
+	const { form, enhance } = superForm(data, {
+		validators: zodClient(newsletterSchema),
+	})
 </script>
 
 <div class="card bg-base-200 mx-auto max-w-prose self-center shadow-sm">
 	<div class="card-body gap-4">
 		<h2 class="card-title">{title}</h2>
-		<form
-			method="POST"
-			use:enhance={() => {
-				const id = toast.loading('Submitting...')
-
-				return ({ result }) => {
-					if (result.type === 'success') {
-						toast.success('Thanks for signing up!', {
-							id,
-						})
-					} else {
-						toast.error('Something went wrong...', {
-							id,
-						})
-					}
-				}
-			}}
-		>
+		<form method="POST" use:enhance>
 			<label class="floating-label">
 				<span>Email</span>
 				<input

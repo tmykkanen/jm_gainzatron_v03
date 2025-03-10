@@ -1,6 +1,11 @@
 <script lang="ts">
-	import Card from '$lib/components/Card.svelte'
+	import NewsletterForm from '$lib/components/NewsletterForm.svelte'
 	import Hero from '$lib/components/Hero.svelte'
+	import { superForm } from 'sveltekit-superforms'
+	import { zodClient } from 'sveltekit-superforms/adapters'
+	import { newsletterSchema } from './schema.js'
+
+	let { data } = $props()
 </script>
 
 <Hero />
@@ -12,5 +17,5 @@
 </section>
 
 <section>
-	<Card title="Sign up for updates" />
+	<NewsletterForm data={data.feedbackForm} title="Sign up for updates" />
 </section>
