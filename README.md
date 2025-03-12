@@ -49,19 +49,19 @@ https://www.youtube.com/watch?v=Mizs9PKTPk8&list=PLD9qSm-W5DLoTa5jr33nTCkszADwzX
 - [x] 1:38:03 - The Toast disappears for Playwright, due to full browser navigation!
 - [x] 1:41:07 - Checking Playwright’s video to figure out what went wrong!
 - [x] 1:43:50 - Adding `use:enhance` to switch to client-side form submission and keep our toast!
-- [ ] 2:09:19 - Standardised enhanced forms SvelteKit Superforms, validated with Zod
-- [ ] 3:07:36 - Standardised & type-safe Superform messages!
-- [ ] 3:25:35 - Emails 💌 Newsletter Audiences with Resend
-- [ ] 3:30:54 - Buying & setting up a domain with the Cloudflare Registrar:
-- [ ] 3:34:22 - Email Routing to sign-up for Free Resend as our client / ops account!
-- [ ] 3:38:28 - API Keys and working with secret & public environment variables
-- [ ] 3:53:16 - Prove to Resend that we own our domain!
-- [ ] 4:01:10 - DEMO 🥳 Add contact to resend audience
-- [ ] 4:05:19 - Setting up MSW: Mock Service Worker
-- [ ] 4:12:35 - Where should we start our MSW server? Creating a `hooks.server.ts`!
-- [ ] 4:29:10 - Resend MSW Handler, to test happy paths & error cases!
-- [ ] 4:31:38 - Watch me think how we should be conditionally importing MSW instead!
-- [ ] 4:35:03 - Cool Cloudflare features, but also alternatives such as ImprovMX
-- [ ] 4:42:53 - Set yourself up for success with my flavour of dependency injection!
+- [x] 2:09:19 - Standardised enhanced forms SvelteKit Superforms, validated with Zod
+- [x] 3:07:36 - Standardised & type-safe Superform messages!
+- [x] 3:25:35 - Emails 💌 Newsletter Audiences with Resend
+- [x] 3:30:54 - Buying & setting up a domain with the Cloudflare Registrar:
+- [x] 3:34:22 - Email Routing to sign-up for Free Resend as our client / ops account!
+- [x] 3:38:28 - API Keys and working with secret & public environment variables
+- [x] 3:53:16 - Prove to Resend that we own our domain!
+- [x] 4:01:10 - DEMO 🥳 Add contact to resend audience
+- [x] 4:05:19 - Setting up MSW: Mock Service Worker
+- [x] 4:12:35 - Where should we start our MSW server? Creating a `hooks.server.ts`!
+- [x] 4:29:10 - Resend MSW Handler, to test happy paths & error cases!
+- [x] 4:31:38 - Watch me think how we should be conditionally importing MSW instead!
+- [x] 4:35:03 - Cool Cloudflare features, but also alternatives such as ImprovMX
+- [x] 4:42:53 - Set yourself up for success with my flavour of dependency injection!
 - [ ] 5:12:11 - IMPORTANT! Conditionally import MSW!
 - [ ] 5:23:37 - Final 🥳 DEMO + LIKE 💜 SUBSCRIBE

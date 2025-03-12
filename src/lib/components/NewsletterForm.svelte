@@ -3,7 +3,6 @@
 	import SuperDebug, { superForm, type Infer, type SuperValidated } from 'sveltekit-superforms'
 	import { newsletterSchema, type NewsletterSchema } from '../../routes/schema.js'
 	import { zodClient } from 'sveltekit-superforms/adapters'
-	import Page from '../../routes/+page.svelte'
 
 	type Props = {
 		data: SuperValidated<Infer<NewsletterSchema>>
@@ -45,7 +44,7 @@
 					bind:value={$formData.email}
 				/>
 			</label>
-			<button class="btn btn-primary" onclick={() => console.log('clicky')}>Sign-up</button>
+			<button class="btn btn-primary">Sign-up</button>
 		</form>
 	</div>
 </div>
