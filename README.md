@@ -63,5 +63,27 @@ https://www.youtube.com/watch?v=Mizs9PKTPk8&list=PLD9qSm-W5DLoTa5jr33nTCkszADwzX
 - [x] 4:31:38 - Watch me think how we should be conditionally importing MSW instead!
 - [x] 4:35:03 - Cool Cloudflare features, but also alternatives such as ImprovMX
 - [x] 4:42:53 - Set yourself up for success with my flavour of dependency injection!
-- [ ] 5:12:11 - IMPORTANT! Conditionally import MSW!
-- [ ] 5:23:37 - Final 🥳 DEMO + LIKE 💜 SUBSCRIBE
+- [x] 5:12:11 - IMPORTANT! Conditionally import MSW!
+- [x] 5:23:37 - Final 🥳 DEMO + LIKE 💜 SUBSCRIBE
+
+## Video 3 (https://www.youtube.com/live/v2QMZYRF3W0?si=QQ5DyqcwSsjaOAKl)
+
+- [ ] 00:00 - What are we doing today? Our REAL APP goes from static to dynamic?
+- [ ] 4:01 - What have we done so far? What did I do offline?
+- [ ] 6:35 - Looping in Svelte & interactive Tutorials!
+- [ ] 19:38 - Looping 🔁 in our real project
+- [ ] 33:58 - Svelte 5 Snippets
+- [ ] 45:48 - Extracting components (like in most frontend frameworks)
+- [ ] 53:00 - Practically working with hardcoded data & dependency injection
+- [ ] 1:28:12 - Working with markdown
+- [ ] 1:48:48 - Switching to a monorepo setup with pnpm workspaces:
+- [ ] 2:14:20 - Using Turborepo
+- [ ] 2:32:00 - Cloudflare deployment 🚀 BREAK
+- [ ] 2:35:25 - Have Playwright work out of a different directory
+- [ ] 2:41:13 - Discussing persisted data options: Postgres, SQLite… somewhere else in the cloud?
+- [ ] 2:46:45 - Setting up Sanity Studio in our monorepo
+- [ ] 3:00:55 - Defining our Sanity content schemas
+- [ ] 4:09:05 - Loading Sanity CMS data in SvelteKit!
+- [ ] 4:54:26 - DevEx & type-safety with sanity-typegen
+- [ ] 5:14:20 - Q&A & Deploying a CMS!
+- [ ] 5:15:57 - Puppy cameo 🧸 Final 🥳 DEMO + LIKE 💜 SUBSCRIBE
