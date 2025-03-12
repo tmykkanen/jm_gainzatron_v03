@@ -37,6 +37,7 @@
 		"eslint-plugin-svelte": "^3.0.3",
 		"globals": "^16.0.0",
 		"jsdom": "^26.0.0",
+		"msw": "^2.7.3",
 		"npm-check-updates": "^17.1.15",
 		"open-props": "^1.7.13",
 		"prettier": "^3.5.3",
