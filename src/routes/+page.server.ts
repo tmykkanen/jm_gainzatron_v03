@@ -1,44 +1,33 @@
-import { error } from '@sveltejs/kit'
 import type { Actions, PageServerLoad } from './$types.js'
-import { fail, superValidate } from 'sveltekit-superforms'
+import { fail, message, superValidate } from 'sveltekit-superforms'
 import { zod } from 'sveltekit-superforms/adapters'
 import { newsletterSchema } from './schema.js'
 
 export const load: PageServerLoad = async () => {
-	return {
-		feedbackForm: await superValidate(zod(newsletterSchema)),
-	}
+	const form = await superValidate(zod(newsletterSchema))
+
+	// Always return {form} in load functions
+	return { form }
 }
 
 export const actions: Actions = {
 	default: async ({ request }) => {
 		const form = await superValidate(request, zod(newsletterSchema))
+
 		if (!form.valid) {
-			return fail(400, {
-				form,
-			})
+			return fail(400, { form })
 		}
 
-		await new Promise((resolve) => setTimeout(resolve, 1000))
-
+		await new Promise((resolve) => setTimeout(resolve, 300))
 		const { email } = form.data
+		console.log('email:', email)
+
 		if (email.includes('error')) {
-			error(500, 'The server is on fire')
+			return message(form, { type: 'error', text: 'There was a problem, please try again.' })
 		}
 
-		console.log('TODO: Create a contact for this user', email)
+		// TODO: Do something with the validated form.data
 
-		return {
-			form,
-		}
-
-		// const data = await request.formData()
-		// const email = data.get('email')
-		// await new Promise((resolve) => setTimeout(resolve, 500))
-
-		// if (typeof email === 'string' && email.includes('error')) {
-		// 	error(400, 'Bad request')
-		// }
-		// console.log('TODO: Create a contact for this user', email)
+		return message(form, { type: 'success', text: 'Thanks for signing up!' })
 	},
 }

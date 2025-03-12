@@ -17,5 +17,5 @@
 </section>
 
 <section>
-	<NewsletterForm data={data.feedbackForm} title="Sign up for updates" />
+	<NewsletterForm data={data.form} title="Sign up for updates" />
 </section>

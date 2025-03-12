@@ -15,3 +15,19 @@ test('can sign up for the mailing list', async ({ page }) => {
 	const toastElement = page.getByRole('status')
 	await expect(toastElement.getByText('Thanks for signing up!')).toBeVisible()
 })
+
+test('sees a message to try again, if error', async ({ page }) => {
+	await page.goto('/')
+
+	// wait for hydration
+	await expect(page.getByTestId('hydrated')).toBeVisible()
+
+	// Expect an h2 title
+	await expect(page.getByRole('heading', { level: 2, name: 'Sign up for updates' })).toBeVisible()
+
+	await page.getByLabel('email').fill('playwright@error.com')
+	await page.getByRole('button', { name: 'Sign-up' }).click()
+
+	const toastElement = page.getByRole('status')
+	await expect(toastElement.getByText('There was a problem, please try again.')).toBeVisible()
+})
