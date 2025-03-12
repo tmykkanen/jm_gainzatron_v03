@@ -2,6 +2,8 @@ import type { Actions, PageServerLoad } from './$types.js'
 import { fail, message, superValidate } from 'sveltekit-superforms'
 import { zod } from 'sveltekit-superforms/adapters'
 import { newsletterSchema } from './schema.js'
+import { RESEND_API_KEY, RESEND_AUDIENCE_ID } from '$env/static/private'
+import { Resend } from 'resend'
 
 export const load: PageServerLoad = async () => {
 	const form = await superValidate(zod(newsletterSchema))
@@ -20,14 +22,19 @@ export const actions: Actions = {
 
 		await new Promise((resolve) => setTimeout(resolve, 300))
 		const { email } = form.data
-		console.log('email:', email)
 
-		if (email.includes('error')) {
+		const resend = new Resend(RESEND_API_KEY)
+
+		const { data, error } = await resend.contacts.create({
+			email,
+			unsubscribed: false,
+			audienceId: RESEND_AUDIENCE_ID,
+		})
+
+		if (error) {
 			return message(form, { type: 'error', text: 'There was a problem, please try again.' })
 		}
-
-		// TODO: Do something with the validated form.data
-
+		console.log(data)
 		return message(form, { type: 'success', text: 'Thanks for signing up!' })
 	},
 }
