@@ -24,6 +24,6 @@
 	{#snippet header()}
 		<h3 class="text-lg font-bold">{name}</h3>
 	{/snippet}
-	<p class="py-4">{description}</p>
+	<p class="py-4">{@html description}</p>
 	<WorkoutDayTable {blocks} />
 </Modal>

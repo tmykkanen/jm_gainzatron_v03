@@ -13,7 +13,7 @@
 		<li class="card bg-base-100 card-md w-96 shadow-sm">
 			<div class="card-body">
 				<h2 class="card-title">{name}</h2>
-				<p>{description}</p>
+				<p>{@html description}</p>
 				<div class="card-actions justify-end">
 					<WorkoutDayDialog {name} {description} {blocks} />
 				</div>

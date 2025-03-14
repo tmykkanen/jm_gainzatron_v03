@@ -1,3 +1,4 @@
+import { marked } from 'marked'
 import type { ProgramsRepoInterface, WorkoutDay, WorkoutWeek } from './ProgramsRepoInterface.js'
 
 const lowerOne: WorkoutDay = {
@@ -119,5 +120,16 @@ export const program: WorkoutWeek = {
 }
 
 export class HardcodedProgramsRepo implements ProgramsRepoInterface {
-	getCurrent = async (): Promise<WorkoutWeek> => program
+	getCurrent = async (): Promise<WorkoutWeek> => {
+		return {
+			...program,
+			description: await marked.parse(program.description),
+			days: await Promise.all(
+				program.days.map(async (day) => ({
+					...day,
+					description: await marked.parse(day.description),
+				})),
+			),
+		}
+	}
 }
