@@ -42,7 +42,7 @@ const lowerOne: WorkoutDay = {
 					name: 'Step-back Lunge',
 					tutorial: { author: 'Alan Thrall', href: 'https://www.youtube.com/watch?v=QOVaHwm-Q6U' },
 					equipment: ['dumbell'],
-					unilateral: true,
+					isUnilateral: true,
 					sets: 3,
 					reps: {
 						min: 7,

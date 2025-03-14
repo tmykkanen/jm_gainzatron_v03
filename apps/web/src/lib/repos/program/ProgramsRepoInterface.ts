@@ -10,7 +10,7 @@ export type Exercise = {
 	name: string
 	tutorial: Tutorial
 	equipment: Equipment[]
-	unilateral?: boolean
+	isUnilateral?: boolean
 }
 
 export const blockTypes = ['focus', 'backoff', 'general', 'superset', 'circuit']

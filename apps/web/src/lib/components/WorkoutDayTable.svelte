@@ -24,7 +24,7 @@
 		</thead>
 		<tbody>
 			{#each blocks as { exercises }}
-				{#each exercises as { name, sets, reps, rir, featuredValue, tutorial, notes, unilateral }}
+				{#each exercises as { name, sets, reps, rir, featuredValue, tutorial, notes, isUnilateral }}
 					<tr>
 						<th>{name}</th>
 						<td>{sets}</td>
@@ -32,7 +32,7 @@
 							{#if typeof reps === 'number'}
 								{reps}
 							{:else}
-								{reps.min} - {reps.max}{unilateral ? '/side' : ''}
+								{reps.min} - {reps.max}{isUnilateral ? '/side' : ''}
 							{/if}
 						</td>
 						<td>{rir}</td>
