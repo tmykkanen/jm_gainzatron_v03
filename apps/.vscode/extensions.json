@@ -1,0 +1,13 @@
+{
+	"recommendations": [
+		"bradlc.vscode-tailwindcss",
+		"codezombiech.gitignore",
+		"dbaeumer.vscode-eslint",
+		"esbenp.prettier-vscode",
+		"file-icons.file-icons",
+		"github.vscode-github-actions",
+		"mikestead.dotenv",
+		"ms-playwright.playwright",
+		"svelte.svelte-vscode"
+	]
+}
