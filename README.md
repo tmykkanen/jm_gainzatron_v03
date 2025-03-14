@@ -74,11 +74,11 @@ https://www.youtube.com/watch?v=Mizs9PKTPk8&list=PLD9qSm-W5DLoTa5jr33nTCkszADwzX
 - [x] 19:38 - Looping 🔁 in our real project
 - [x] 33:58 - Svelte 5 Snippets
 - [x] 45:48 - Extracting components (like in most frontend frameworks)
-- [ ] 53:00 - Practically working with hardcoded data & dependency injection
-- [ ] 1:28:12 - Working with markdown
-- [ ] 1:48:48 - Switching to a monorepo setup with pnpm workspaces:
-- [ ] 2:14:20 - Using Turborepo
-- [ ] 2:32:00 - Cloudflare deployment 🚀 BREAK
+- [x] 53:00 - Practically working with hardcoded data & dependency injection
+- [x] 1:28:12 - Working with markdown
+- [x] 1:48:48 - Switching to a monorepo setup with pnpm workspaces:
+- [x] 2:14:20 - Using Turborepo
+- [x] 2:32:00 - Cloudflare deployment 🚀 BREAK
 - [ ] 2:35:25 - Have Playwright work out of a different directory
 - [ ] 2:41:13 - Discussing persisted data options: Postgres, SQLite… somewhere else in the cloud?
 - [ ] 2:46:45 - Setting up Sanity Studio in our monorepo

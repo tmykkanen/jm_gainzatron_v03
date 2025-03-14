@@ -6,6 +6,9 @@ on:
     branches: [main, master]
 jobs:
   test:
+    defaults:
+      run:
+        working-directory: ./apps/web
     timeout-minutes: 60
     runs-on: ubuntu-latest
     steps:
@@ -25,5 +28,5 @@ jobs:
         if: ${{ !cancelled() }}
         with:
           name: test-results
-          path: test-results/
+          path: ./apps/web/test-results/
           retention-days: 30
