@@ -68,12 +68,12 @@ https://www.youtube.com/watch?v=Mizs9PKTPk8&list=PLD9qSm-W5DLoTa5jr33nTCkszADwzX
 
 ## Video 3 (https://www.youtube.com/live/v2QMZYRF3W0?si=QQ5DyqcwSsjaOAKl)
 
-- [ ] 00:00 - What are we doing today? Our REAL APP goes from static to dynamic?
-- [ ] 4:01 - What have we done so far? What did I do offline?
-- [ ] 6:35 - Looping in Svelte & interactive Tutorials!
-- [ ] 19:38 - Looping 🔁 in our real project
-- [ ] 33:58 - Svelte 5 Snippets
-- [ ] 45:48 - Extracting components (like in most frontend frameworks)
+- [x] 00:00 - What are we doing today? Our REAL APP goes from static to dynamic?
+- [x] 4:01 - What have we done so far? What did I do offline?
+- [x] 6:35 - Looping in Svelte & interactive Tutorials!
+- [x] 19:38 - Looping 🔁 in our real project
+- [x] 33:58 - Svelte 5 Snippets
+- [x] 45:48 - Extracting components (like in most frontend frameworks)
 - [ ] 53:00 - Practically working with hardcoded data & dependency injection
 - [ ] 1:28:12 - Working with markdown
 - [ ] 1:48:48 - Switching to a monorepo setup with pnpm workspaces:
