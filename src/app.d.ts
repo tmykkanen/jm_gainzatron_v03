@@ -1,6 +1,7 @@
 // See https://svelte.dev/docs/kit/types#app.d.ts
 
 import type { ResendNewsLetterRepo } from '$lib/repos/newsletter/ResendNewsletterRepo.js'
+import type { HardcodedProgramsRepo } from '$lib/repos/program/HardcodedProgramsRepo.js'
 
 // for information about these interfaces
 declare global {
@@ -11,6 +12,7 @@ declare global {
 		// interface Error {}
 		interface Locals {
 			newsletterRepo: ResendNewsLetterRepo
+			programsRepo: HardcodedProgramsRepo
 		}
 		// interface PageData {}
 		// interface PageState {}

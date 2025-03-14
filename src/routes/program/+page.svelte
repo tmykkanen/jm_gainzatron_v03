@@ -1,7 +1,7 @@
 <script lang="ts">
-	import Icon from '@iconify/svelte'
-	import { program } from './program.js'
 	import WorkoutDayDialog from '$lib/components/WorkoutDayDialog.svelte'
+
+	let { data } = $props()
 </script>
 
 <h1 class="text-6xl">Program</h1>
@@ -9,7 +9,7 @@
 <p>Week starting 4/11/25</p>
 
 <ul class="flex gap-4">
-	{#each program.days as { name, description, blocks }}
+	{#each data.program.days as { name, description, blocks }}
 		<li class="card bg-base-100 card-md w-96 shadow-sm">
 			<div class="card-body">
 				<h2 class="card-title">{name}</h2>

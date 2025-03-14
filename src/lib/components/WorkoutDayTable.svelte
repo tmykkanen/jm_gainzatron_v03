@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { WorkoutBlock } from '../../routes/program/program.js'
+	import type { WorkoutBlock } from '$lib/repos/program/ProgramsRepoInterface.js'
 
 	type Props = {
 		blocks: WorkoutBlock[]
@@ -24,7 +24,7 @@
 		</thead>
 		<tbody>
 			{#each blocks as { exercises }}
-				{#each exercises as { name, sets, reps, rir, featuredValue, tutorial, notes }}
+				{#each exercises as { name, sets, reps, rir, featuredValue, tutorial, notes, unilateral }}
 					<tr>
 						<th>{name}</th>
 						<td>{sets}</td>
@@ -32,7 +32,7 @@
 							{#if typeof reps === 'number'}
 								{reps}
 							{:else}
-								{reps.min} - {reps.max}
+								{reps.min} - {reps.max}{unilateral ? '/side' : ''}
 							{/if}
 						</td>
 						<td>{rir}</td>

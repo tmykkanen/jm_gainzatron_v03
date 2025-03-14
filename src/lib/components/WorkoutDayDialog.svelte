@@ -1,8 +1,8 @@
 <script lang="ts">
 	import Icon from '@iconify/svelte'
 	import Modal from './Modal.svelte'
-	import type { WorkoutBlock } from '../../routes/program/program.js'
 	import WorkoutDayTable from './WorkoutDayTable.svelte'
+	import type { WorkoutBlock } from '$lib/repos/program/ProgramsRepoInterface.js'
 
 	let showModal = $state(false)
 

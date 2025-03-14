@@ -1,45 +1,4 @@
-type Tutorial = {
-	author: string
-	href: string
-}
-
-export const equipment = ['barbell', 'dumbell', 'kettlebell', 'machine']
-type Equipment = (typeof equipment)[number]
-
-type Exercise = {
-	name: string
-	tutorial: Tutorial
-	equipment: Equipment[]
-	unilateral?: boolean
-}
-
-export const blockTypes = ['focus', 'backoff', 'general', 'superset', 'circuit']
-type BlockType = (typeof blockTypes)[number]
-
-type WorkoutExercise = Exercise & {
-	sets: number
-	reps: number | { min: number; max: number }
-	rir: number
-	notes: string
-	featuredValue: { value: number; unit: string }
-}
-
-export type WorkoutBlock = {
-	exercises: WorkoutExercise[]
-	type: BlockType
-}
-
-type WorkoutDay = {
-	name: string
-	description: string
-	blocks: WorkoutBlock[]
-}
-
-type WorkoutWeek = {
-	name: string
-	description: string
-	days: WorkoutDay[]
-}
+import type { ProgramsRepoInterface, WorkoutDay, WorkoutWeek } from './ProgramsRepoInterface.js'
 
 const lowerOne: WorkoutDay = {
 	name: 'Lower 1',
@@ -82,6 +41,7 @@ const lowerOne: WorkoutDay = {
 					name: 'Step-back Lunge',
 					tutorial: { author: 'Alan Thrall', href: 'https://www.youtube.com/watch?v=QOVaHwm-Q6U' },
 					equipment: ['dumbell'],
+					unilateral: true,
 					sets: 3,
 					reps: {
 						min: 7,
@@ -156,4 +116,8 @@ export const program: WorkoutWeek = {
 	name: 'Powerbuilding Phase 1: Week 1/6',
 	description: 'Focused on hypertrophy, with moderate volume',
 	days: [lowerOne, upperOne, lowerTwo, upperTwo, bro],
+}
+
+export class HardcodedProgramsRepo implements ProgramsRepoInterface {
+	getCurrent = async (): Promise<WorkoutWeek> => program
 }
